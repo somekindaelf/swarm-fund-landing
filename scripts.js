@@ -1,5 +1,7 @@
 // Ensure the DOM is fully loaded before running the script
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM fully loaded and parsed");
+
     const ideaForm = document.getElementById('ideaForm');
 
     // Event listener for form submission
@@ -13,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
             link: document.getElementById('ideaLink').value,
             email: document.getElementById('email').value,
             referrer: document.getElementById('referrer').value,
-            shoutout: document.getElementById('shoutout').value
+            shoutout: document.getElementById('shoutout').value,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()  // Using Firebase Firestore timestamp
         };
         console.log("Form data collected:", formData);
 
@@ -52,10 +55,18 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Simulate successful form submission
-        console.log("Form submission successful!");
-        alert('Form submitted successfully! (Simulation)');
-        ideaForm.reset();
+        // Save form data to Firestore
+        console.log("Attempting to save to Firestore...");
+        db.collection("submissions").add(formData)
+        .then(() => {
+            console.log("Data successfully written to Firestore");
+            alert('Thank you for your submission! We will review it and get back to you.');
+            ideaForm.reset();
+        })
+        .catch((error) => {
+            console.error('Error writing document:', error); // Log the error to the console
+            alert('There was an error with your submission. Please try again.');
+        });
     });
 
     // Tooltip functionality
