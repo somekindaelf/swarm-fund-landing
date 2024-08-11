@@ -1,26 +1,106 @@
-<!-- Firebase SDKs placed just before the closing body tag -->
-<!-- Firebase App (the core Firebase SDK) -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swarm Fund</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="bee-logo.png" alt="Swarm Fund Logo" class="logo-img">
+            <h1>Swarm Fund</h1>
+        </div>
+        <p class="tagline">Where the community helps independent artists and businesses thrive.</p>
+    </header>
 
-<script>
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-        apiKey: "AIzaSyDqk1jhyeD5YvmXOXcwKCKeNKsCZ30EMcg",
-        authDomain: "swarmfundsubmissions.firebaseapp.com",
-        projectId: "swarmfundsubmissions",
-        storageBucket: "swarmfundsubmissions.appspot.com",
-        messagingSenderId: "386729555794",
-        appId: "1:386729555794:web:7dc3dc6ceaba024ee52c8b",
-        measurementId: "G-19NMLJQTGY"
-    };
+    <section class="intro">
+        <h2>Welcome to Swarm Fund</h2>
+        <p>We’re a community-driven platform that supports small businesses and independent artists through funding. Join our swarm and help make a difference!</p>
+    </section>
 
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    const db = firebase.firestore();
-</script>
+    <section class="form-section">
+        <h2>Submit Your Idea</h2>
+        <form id="ideaForm">
+            <div class="form-group">
+                <label for="ideaCategory">Category</label>
+                <select id="ideaCategory" name="category" required>
+                    <option value="art">Art</option>
+                    <option value="music">Music</option>
+                    <option value="craft">Craft</option>
+                    <option value="tech">Tech</option>
+                </select>
+            </div>
 
-<!-- Your custom script -->
-<script src="scripts.js"></script>
+            <div class="form-group">
+                <label for="ideaLink">
+                    Link to Your Idea 
+                    <span class="info-icon" id="infoIcon">i</span>
+                </label>
+                <input type="url" id="ideaLink" name="link" placeholder="https://www.gofundme.com/your-idea" required pattern="https?://.+">
+                <div class="invalid-feedback" id="invalidFeedback">Please enter a link from a trusted crowdfunding site.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="referrer">How Did You Find Us?</label>
+                <select id="referrer" name="referrer" required>
+                    <option value="twitter">Twitter</option>
+                    <option value="instagram">Instagram</</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="friend">Friend</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="shoutout">Who Should We Shout Out?</label>
+                <input type="text" id="shoutout" name="shoutout" placeholder="Your Twitter/Instagram handle">
+            </div>
+
+            <div class="form-group terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I accept the <a href="terms.html" target="_blank">Terms and Conditions</a></label>
+            </div>
+
+            <button type="submit">Submit Idea</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Swarm Fund. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Firebase SDKs placed just before the closing body tag -->
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID",
+            measurementId: "YOUR_MEASUREMENT_ID"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+    </script>
+
+    <!-- Your custom script -->
+    <script src="scripts.js"></script>
+</body>
+</html>
