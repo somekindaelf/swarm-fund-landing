@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Your existing HTML structure remains unchanged -->
+    
     <header>
         <div class="logo">
             <img src="bee-logo.png" alt="Swarm Fund Logo" class="logo-img">
@@ -18,7 +20,7 @@
 
     <section class="intro">
         <h2>Welcome to Swarm Fund</h2>
-        <p>We are a community-driven platform that supports small businesses and independent artists through funding. Join our swarm and help make a difference!</p>
+        <p>We’re a community-driven platform that supports small businesses and independent artists through funding. Join our swarm and help make a difference!</p>
     </section>
 
     <section class="form-section">
@@ -76,31 +78,7 @@
         <p>© 2024 Swarm Fund. All Rights Reserved.</p>
     </footer>
 
-    <!-- Firebase SDKs placed just before the closing body tag -->
-    <!-- Firebase App (the core Firebase SDK) -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-
-    <script>
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyDqk1jhyeD5YvmXOXcwKCKeNKsCZ30EMcg",
-            authDomain: "swarmfundsubmissions.firebaseapp.com",
-            projectId: "swarmfundsubmissions",
-            storageBucket: "swarmfundsubmissions.appspot.com",
-            messagingSenderId: "386729555794",
-            appId: "1:386729555794:web:7dc3dc6ceaba024ee52c8b",
-            measurementId: "G-19NMLJQTGY"
-        };
-
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        const db = firebase.firestore();
-    </script>
-
-    <!-- Your custom script should come after Firebase initialization -->
+    <!-- Only include your custom script without Firebase -->
     <script src="scripts.js"></script>
 </body>
 </html>
