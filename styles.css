@@ -54,12 +54,12 @@ header {
 
 .form-group {
     margin-bottom: 15px;
+    position: relative; /* Ensure the tooltip is positioned relative to the form group */
 }
 
 .form-group label {
-    display: block;
+    display: inline-block;
     margin-bottom: 5px;
-    font-weight: 600;
 }
 
 .form-group input,
@@ -100,11 +100,11 @@ footer {
     color: grey;
     cursor: pointer;
     border-bottom: 1px dotted grey;
+    position: relative;
 }
 
 .tooltip {
     visibility: hidden;
-    width: 200px;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -112,30 +112,13 @@ footer {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* Adjust based on positioning */
-    left: 50%;
-    margin-left: -100px; /* Use half of the width (to center it) */
     opacity: 0;
     transition: opacity 0.3s;
+    font-size: 0.9em;
+    max-width: 200px;
+    pointer-events: none; /* Prevent mouse interaction */
 }
 
-.tooltip::after {
-    content: "";
-    position: absolute;
-    top: 100%; /* At the bottom of the tooltip */
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-.info-icon:hover + .tooltip {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Validation feedback */
 .invalid-feedback {
     color: red;
     display: none;

@@ -1,4 +1,5 @@
-// Add an event listener for form submission
+// scripts.js
+
 document.getElementById('ideaForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -11,7 +12,6 @@ document.getElementById('ideaForm').addEventListener('submit', function(event) {
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
     };
 
-    // List of trusted crowdfunding site patterns
     const trustedSites = [
         'https://www.gofundme.com/',
         'https://www.kickstarter.com/',
@@ -27,17 +27,14 @@ document.getElementById('ideaForm').addEventListener('submit', function(event) {
 
     const isTrusted = trustedSites.some(site => formData.link.startsWith(site));
 
-    // Custom validation message for unrecognized links
     if (!isTrusted) {
-        const feedback = document.getElementById('invalidFeedback');
-        feedback.style.display = 'block';
+        document.getElementById('invalidFeedback').style.display = 'block';
         document.getElementById('ideaLink').focus();
         return;
     } else {
         document.getElementById('invalidFeedback').style.display = 'none';
     }
 
-    // Check if terms and conditions are accepted
     const termsAccepted = document.getElementById('terms').checked;
     if (!termsAccepted) {
         alert('Please accept the Terms and Conditions before submitting.');
@@ -51,7 +48,7 @@ document.getElementById('ideaForm').addEventListener('submit', function(event) {
         document.getElementById('ideaForm').reset();
     })
     .catch((error) => {
-        console.error('Error writing document: ', error);
+        console.error('Error writing document: ', error); // Log the error to the console
         alert('There was an error with your submission. Please try again.');
     });
 });

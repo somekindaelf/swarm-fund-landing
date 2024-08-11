@@ -6,12 +6,12 @@
     <title>Swarm Fund</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- Firebase App (the core Firebase SDK) -->
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js"></script>
-    
+
     <script>
         // Your web app's Firebase configuration
         const firebaseConfig = {
@@ -23,18 +23,12 @@
             appId: "1:386729555794:web:7dc3dc6ceaba024ee52c8b",
             measurementId: "G-19NMLJQTGY"
         };
-    
+
         // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    
-        // Get Firestore instance (using the global firebase object)
-        const db = firebase.firestore(); 
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
     </script>
 </head>
-    
-    
-    
-    
 <body>
     <header>
         <div class="logo">
@@ -63,11 +57,9 @@
             </div>
 
             <div class="form-group">
-                <label for="ideaLink">Link to Your Idea 
+                <label for="ideaLink">
+                    Link to Your Idea 
                     <span class="info-icon" id="infoIcon">i</span>
-                    <div class="tooltip" id="tooltip">
-                        Trusted Sites: GoFundMe, Kickstarter, Indiegogo, Patreon, Crowdfunder, JustGiving, Fundly, Crowdrise, FundRazr, Chuffed.
-                    </div>
                 </label>
                 <input type="url" id="ideaLink" name="link" placeholder="https://www.gofundme.com/your-idea" required pattern="https?://.+">
                 <div class="invalid-feedback" id="invalidFeedback">Please enter a link from a trusted crowdfunding site.</div>
