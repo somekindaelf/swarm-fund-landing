@@ -1,5 +1,3 @@
-// scripts.js
-
 // Ensure the DOM is fully loaded before running the script
 document.addEventListener('DOMContentLoaded', function() {
     const ideaForm = document.getElementById('ideaForm');
