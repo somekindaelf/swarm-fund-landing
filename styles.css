@@ -1,17 +1,16 @@
 /* styles.css */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #ffffff;
+    color: #333333;
 }
 
 header {
-    background-color: #ffcb05;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #fbbd23;
+    border-bottom: 1px solid #dddddd;
 }
 
 .logo {
@@ -29,7 +28,7 @@ header {
 .tagline {
     font-size: 1.2em;
     margin-top: 10px;
-    color: #555;
+    color: #555555;
 }
 
 .intro {
@@ -39,9 +38,9 @@ header {
 
 .form-section {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -49,16 +48,15 @@ header {
 .form-section h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #333333;
 }
 
 .form-group {
     margin-bottom: 15px;
-    position: relative; /* Ensure the tooltip is positioned relative to the form group */
 }
 
 .form-group label {
-    display: inline-block;
+    display: block;
     margin-bottom: 5px;
 }
 
@@ -66,31 +64,37 @@ header {
 .form-group select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #333333;
 }
 
 button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #ffcb05;
+    background-color: #000000;
     border: none;
     border-radius: 4px;
-    color: white;
+    color: #ffffff;
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #fbbd23;
+    background-color: #333333;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #f9f9f9;
+    color: #333333;
 }
 
 /* Tooltip styling */
@@ -105,8 +109,8 @@ footer {
 
 .tooltip {
     visibility: hidden;
-    background-color: #555;
-    color: #fff;
+    background-color: #555555;
+    color: #ffffff;
     text-align: center;
     border-radius: 6px;
     padding: 5px;
@@ -119,20 +123,40 @@ footer {
     pointer-events: none; /* Prevent mouse interaction */
 }
 
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555555 transparent transparent transparent;
+}
+
 .invalid-feedback {
     color: red;
     display: none;
+    margin-top: 5px;
 }
 
 .terms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 15px;
+    text-align: center;
+}
+
+.terms label {
+    margin-left: 10px;
 }
 
 .terms a {
-    color: #333;
+    color: #333333;
     text-decoration: underline;
 }
 
 .terms a:hover {
-    color: #ffcb05;
+    color: #000000;
 }
