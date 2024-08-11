@@ -18,7 +18,7 @@
 
     <section class="intro">
         <h2>Welcome to Swarm Fund</h2>
-        <p>We’re a community-driven platform that supports small businesses and independent artists through funding. Join our swarm and help make a difference!</p>
+        <p>Weâ€™re a community-driven platform that supports small businesses and independent artists through funding. Join our swarm and help make a difference!</p>
     </section>
 
     <section class="form-section">
@@ -35,8 +35,14 @@
             </div>
 
             <div class="form-group">
-                <label for="ideaLink">Link to Your Idea (e.g., GoFundMe)</label>
+                <label for="ideaLink">Link to Your Idea 
+                    <span class="info-icon" id="infoIcon">i</span>
+                    <div class="tooltip" id="tooltip">
+                        Trusted Sites: GoFundMe, Kickstarter, Indiegogo, Patreon, Crowdfunder, JustGiving, Fundly, Crowdrise, FundRazr, Chuffed.
+                    </div>
+                </label>
                 <input type="url" id="ideaLink" name="link" placeholder="https://www.gofundme.com/your-idea" required pattern="https?://.+">
+                <div class="invalid-feedback" id="invalidFeedback">Please enter a link from a trusted crowdfunding site.</div>
             </div>
 
             <div class="form-group">
@@ -59,12 +65,17 @@
                 <input type="text" id="shoutout" name="shoutout" placeholder="Your Twitter/Instagram handle">
             </div>
 
+            <div class="form-group terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I accept the <a href="terms.html" target="_blank">Terms and Conditions</a></label>
+            </div>
+
             <button type="submit">Submit Idea</button>
         </form>
     </section>
 
     <footer>
-        <p>© 2024 Swarm Fund. All Rights Reserved.</p>
+        <p>Â© 2024 Swarm Fund. All Rights Reserved.</p>
     </footer>
 
     <script src="scripts.js"></script>
