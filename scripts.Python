@@ -7,17 +7,28 @@ document.getElementById('ideaForm').addEventListener('submit', function(event) {
     const referrer = document.getElementById('referrer').value;
     const shoutout = document.getElementById('shoutout').value;
 
-    // Basic validation for trusted site link (GoFundMe example)
-    const trustedSites = ['gofundme.com', 'kickstarter.com', 'indiegogo.com'];
-    const isTrusted = trustedSites.some(site => ideaLink.includes(site));
+    // List of trusted crowdfunding site patterns
+    const trustedSites = [
+        'https://www.gofundme.com/',
+        'https://www.kickstarter.com/',
+        'https://www.indiegogo.com/',
+        'https://www.patreon.com/',
+        'https://www.crowdfunder.com/',
+        'https://www.justgiving.com/',
+        'https://www.fundly.com/',
+        'https://www.crowdrise.com/',
+        'https://fundrazr.com/',
+        'https://chuffed.org/'
+    ];
+
+    const isTrusted = trustedSites.some(site => ideaLink.startsWith(site));
 
     if (!isTrusted) {
         alert('Please submit a link from a trusted crowdfunding site like GoFundMe, Kickstarter, or Indiegogo.');
         return;
     }
 
-    // Here you can add the code to send the form data to a backend or an email service
-
+    // Assuming the data is being sent to a backend, I'll discuss how to handle that below
     alert('Thank you for your submission! We will review it and get back to you.');
     document.getElementById('ideaForm').reset();
 });
