@@ -6,12 +6,12 @@
     <title>Swarm Fund</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
+    
     <!-- Firebase App (the core Firebase SDK) -->
-    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    
     <script>
         // Your web app's Firebase configuration
         const firebaseConfig = {
@@ -23,12 +23,14 @@
             appId: "1:386729555794:web:7dc3dc6ceaba024ee52c8b",
             measurementId: "G-19NMLJQTGY"
         };
-
+    
         // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
         const db = firebase.firestore();
     </script>
 </head>
+    
 <body>
     <header>
         <div class="logo">
