@@ -10,6 +10,7 @@ body {
 header {
     padding: 40px 20px;
     text-align: center;
+    background-color: #ffffff; /* Ensure the header background is white */
 }
 
 .logo h1 {
@@ -80,19 +81,18 @@ header {
 button[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: transparent;
-    border: 2px solid #333333;
-    color: #333333;
+    background-color: #333333;
+    border: none;
+    color: #ffffff;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.2em;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #555555;
 }
 
 footer {
@@ -100,6 +100,7 @@ footer {
     padding: 20px;
     font-size: 0.9em;
     color: #999999;
+    background-color: #ffffff; /* Ensure the footer background is white */
 }
 
 /* Tooltip styling */
