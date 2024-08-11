@@ -1,5 +1,3 @@
-// scripts.js
-
 // Add an event listener for form submission
 document.getElementById('ideaForm').addEventListener('submit', function(event) {
     event.preventDefault();
