@@ -1,0 +1,23 @@
+// scripts.js
+document.getElementById('ideaForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const ideaLink = document.getElementById('ideaLink').value;
+    const email = document.getElementById('email').value;
+    const referrer = document.getElementById('referrer').value;
+    const shoutout = document.getElementById('shoutout').value;
+
+    // Basic validation for trusted site link (GoFundMe example)
+    const trustedSites = ['gofundme.com', 'kickstarter.com', 'indiegogo.com'];
+    const isTrusted = trustedSites.some(site => ideaLink.includes(site));
+
+    if (!isTrusted) {
+        alert('Please submit a link from a trusted crowdfunding site like GoFundMe, Kickstarter, or Indiegogo.');
+        return;
+    }
+
+    // Here you can add the code to send the form data to a backend or an email service
+
+    alert('Thank you for your submission! We will review it and get back to you.');
+    document.getElementById('ideaForm').reset();
+});
