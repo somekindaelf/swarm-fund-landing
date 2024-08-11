@@ -1,3 +1,6 @@
+// Simple alert to check if the script is running
+alert("scripts.js is loaded!");
+
 // Ensure the DOM is fully loaded before running the script
 document.addEventListener('DOMContentLoaded', function() {
     console.log("DOM fully loaded and parsed");
