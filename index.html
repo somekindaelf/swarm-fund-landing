@@ -26,11 +26,12 @@
     
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        // Import getFirestore from firebase-firestore.js
-        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
-        const db = getFirestore(); // Use getFirestore() to create your Firestore instance
+    
+        // Get Firestore instance (using the global firebase object)
+        const db = firebase.firestore(); 
     </script>
 </head>
+    
     
     
     
