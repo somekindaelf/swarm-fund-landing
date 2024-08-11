@@ -1,10 +1,14 @@
 // Ensure the DOM is fully loaded before running the script
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM fully loaded and parsed");
+
     const ideaForm = document.getElementById('ideaForm');
+    console.log("Form element:", ideaForm);
 
     // Event listener for form submission
     ideaForm.addEventListener('submit', function(event) {
         event.preventDefault();
+        console.log("Form submission triggered");
 
         // Collecting form data
         const formData = {
@@ -15,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             shoutout: document.getElementById('shoutout').value,
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         };
+        console.log("Form data collected:", formData);
 
         // List of trusted crowdfunding site patterns
         const trustedSites = [
@@ -32,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Validate the link
         const isTrusted = trustedSites.some(site => formData.link.startsWith(site));
+        console.log("Is the link trusted?", isTrusted);
 
         if (!isTrusted) {
             document.getElementById('invalidFeedback').style.display = 'block';
@@ -43,19 +49,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Check if terms and conditions are accepted
         const termsAccepted = document.getElementById('terms').checked;
+        console.log("Terms accepted:", termsAccepted);
+
         if (!termsAccepted) {
             alert('Please accept the Terms and Conditions before submitting.');
             return;
         }
 
         // Save form data to Firestore
+        console.log("Attempting to save to Firestore...");
         db.collection("submissions").add(formData)
         .then(() => {
+            console.log("Data successfully written to Firestore");
             alert('Thank you for your submission! We will review it and get back to you.');
             ideaForm.reset();
         })
         .catch((error) => {
-            console.error('Error writing document: ', error); // Log the error to the console
+            console.error('Error writing document:', error); // Log the error to the console
             alert('There was an error with your submission. Please try again.');
         });
     });
