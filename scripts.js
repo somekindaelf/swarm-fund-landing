@@ -1,9 +1,13 @@
 // Ensure the DOM is fully loaded before running the script
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM fully loaded and parsed");
-
     const ideaForm = document.getElementById('ideaForm');
 
+    // Ensure the form element exists
+    if (!ideaForm) {
+        console.error("Form element not found!");
+        return; // Exit the script early if the form element is not found
+    }
+    
     // Event listener for form submission
     ideaForm.addEventListener('submit', function(event) {
         event.preventDefault();
