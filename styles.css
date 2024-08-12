@@ -70,6 +70,37 @@ hr {
     font-size: 0.9em;
 }
 
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    .menu {
+        position: static;
+        width: 100%;
+        background-color: #f8f8f8;
+        text-align: center;
+    }
+
+    .menu ul {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .menu.show ul {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5em;
+        margin-right: 20px;
+    }
+}
+
 .form-section, .content {
     max-width: 800px;
     margin: 0 auto;

@@ -2,12 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Redirecting...</title>
-    <script type="text/javascript">
-        window.location.href = "today.html";
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWARMFUND</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="today.html">link to Today</a>.</p>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="sf-logo.png" alt="Swarm Fund Logo" class="logo-img">
+            </a>
+            <h1>SWARMFUND</h1>
+        </div>
+        <nav class="menu">
+            <span class="menu-toggle">&#9776; Menu</span>
+            <ul>
+                <li><a href="today.html">Today</a></li>
+                <li><a href="recent.html">Recent</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <section class="intro">
+        <h2>Found a great idea?</h2>
+        <p>We’re a community-driven platform; submit great ideas you have found to the swarm.</p>
+    </section>
+
+    <section class="form-section">
+        <h2>Submit Your Idea</h2>
+        <form id="ideaForm">
+            <!-- Form content as before -->
+        </form>
+    </section>
+
+    <footer>
+        <hr>
+        <div class="footer-content">
+            <img src="sf-logo.png" alt="Swarm Fund Logo" class="logo-img">
+            <p>SWARMFUND - Great ideas funded fast.</p>
+            <a href="https://x.com/SwarmFunders" class="x-link">
+                <img src="x-logo.png" alt="X Logo" class="x-img">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
