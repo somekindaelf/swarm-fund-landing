@@ -43,6 +43,7 @@ hr {
     border-top: 1px solid #ccc;
     width: 75%; /* 3/4 width */
     margin: 20px auto; /* Center the line */
+    max-width: 800px; /* To prevent it from stretching too wide on larger screens */
 }
 
 .menu {
