@@ -26,9 +26,55 @@
 
     <hr>
 
-    <section class="content">
-        <h2>ASSESSMENT</h2>
-        <p>Content for assessment of ideas will be displayed here.</p>
+    <section class="form-section">
+        <h2>Submit Your Idea</h2>
+        <form id="ideaForm">
+            <div class="form-group">
+                <label for="ideaCategory">Category</label>
+                <select id="ideaCategory" name="category" required>
+                    <option value="art">Art</option>
+                    <option value="music">Music</option>
+                    <option value="craft">Craft</option>
+                    <option value="tech">Tech</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ideaLink">
+                    Link to Your Idea 
+                    <span class="info-icon" id="infoIcon">i</span>
+                </label>
+                <input type="url" id="ideaLink" name="link" placeholder="https://www.gofundme.com/your-idea" required pattern="https?://.+">
+                <div class="invalid-feedback" id="invalidFeedback">Please enter a link from a trusted crowdfunding site.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="referrer">How Did You Find Us?</label>
+                <select id="referrer" name="referrer" required>
+                    <option value="twitter">Twitter</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="friend">Friend</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="shoutout">Who Should We Shout Out?</label>
+                <input type="text" id="shoutout" name="shoutout" placeholder="Your Twitter/Instagram handle">
+            </div>
+
+            <div class="form-group terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I accept the <a href="terms.html" target="_blank">Terms and Conditions</a></label>
+            </div>
+
+            <button type="submit">Submit Idea</button>
+        </form>
     </section>
 
     <footer>
@@ -38,5 +84,7 @@
             <p>SWARMFUND - Great ideas funded fast.</p>
         </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
