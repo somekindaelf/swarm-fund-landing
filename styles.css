@@ -1,23 +1,30 @@
 /* styles.css */
+
+/* Updated background color to match the logo background */
 body {
     font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #f0f0f0; /* Adjust this color to match your logo's background */
     color: #333333;
 }
 
 header {
     padding: 40px 20px;
     text-align: center;
-    background-color: #ffffff; /* Ensure the header background is white */
+    background-color: #f0f0f0;
 }
 
-.logo h1 {
-    margin: 0;
-    font-weight: 600;
-    font-size: 2em;
-    color: #333333;
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 50px; /* Adjust height to scale the logo down */
+    width: auto; /* Maintain aspect ratio */
 }
 
 .tagline {
@@ -100,90 +107,16 @@ footer {
     padding: 20px;
     font-size: 0.9em;
     color: #999999;
-    background-color: #ffffff; /* Ensure the footer background is white */
+    background-color: #f0f0f0;
 }
 
-/* Tooltip styling */
-.info-icon {
-    font-style: italic;
-    font-size: 0.9em;
-    color: #999999;
-    cursor: pointer;
-    border-bottom: 1px dotted #999999;
-    position: relative;
-}
-
-.tooltip {
-    visibility: hidden;
-    background-color: #555555;
-    color: #ffffff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 0.9em;
-    max-width: 200px;
-    pointer-events: none;
-}
-
-.tooltip::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555555 transparent transparent transparent;
-}
-
-.invalid-feedback {
-    color: red;
-    display: none;
-    margin-top: 5px;
-}
-
-.terms {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.terms label {
-    margin-left: 10px;
-}
-
-.terms a {
-    color: #333333;
-    text-decoration: underline;
-}
-
-.terms a:hover {
-    color: #000000;
-}
-/* styles.css */
-
-/* Add this at the end of the existing CSS */
-
-/* X link styling */
 .x-link {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #333333;
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1em;
-    font-weight: 600;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
 }
 
-.x-link:hover {
-    background-color: #555555;
+.x-img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%); /* Invert colors to match monochrome theme */
 }
