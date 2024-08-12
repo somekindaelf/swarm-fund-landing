@@ -6,6 +6,9 @@ body {
     padding: 0;
     background-color: #f8f8f8;
     color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -50,7 +53,7 @@ hr {
 
 .menu ul {
     list-style: none;
-    display: block; /* Change to block for vertical alignment */
+    display: block; /* Vertical alignment */
     padding: 0;
     margin: 0;
 }
@@ -72,6 +75,15 @@ hr {
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* To push the footer to the bottom */
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
 
 .footer-content {
@@ -92,12 +104,11 @@ hr {
 }
 
 .x-link {
-    display: inline-block;
-    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .x-img {
-    width: 30px;
     height: 30px;
+    width: auto;
     filter: invert(100%);
 }
