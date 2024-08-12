@@ -70,8 +70,8 @@ hr {
     font-size: 0.9em;
 }
 
-/* Mobile-friendly adjustments */
-@media (max-width: 768px) {
+/* Mobile-friendly adjustments for portrait mode only */
+@media (max-width: 768px) and (orientation: portrait) {
     .menu {
         position: static;
         width: 100%;
@@ -85,10 +85,6 @@ hr {
         align-items: center;
     }
 
-    .menu ul li {
-        margin: 10px 0;
-    }
-
     .menu.show ul {
         display: flex; /* Show menu when toggled */
     }
@@ -98,6 +94,17 @@ hr {
         cursor: pointer;
         font-size: 1.5em;
         margin-right: 20px;
+    }
+}
+
+/* Hide the burger menu toggle for landscape and larger screens */
+@media (min-width: 769px) or (orientation: landscape) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu ul {
+        display: block;
     }
 }
 
