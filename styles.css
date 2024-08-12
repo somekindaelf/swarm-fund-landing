@@ -165,3 +165,25 @@ footer {
 .terms a:hover {
     color: #000000;
 }
+/* styles.css */
+
+/* Add this at the end of the existing CSS */
+
+/* X link styling */
+.x-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.x-link:hover {
+    background-color: #555555;
+}
