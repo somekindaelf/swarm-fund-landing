@@ -61,39 +61,6 @@ hr {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.archive-post {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.archive-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.archive-post:hover .archive-image {
-    transform: scale(1.05);
-}
-
-.archive-description {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.archive-post:hover .archive-description {
-    opacity: 1;
-}
-
 .footer-content {
     display: flex;
     align-items: center;
@@ -109,4 +76,15 @@ hr {
 .footer-content p {
     margin: 0;
     font-weight: 600;
+}
+
+.x-link {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.x-img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
 }
