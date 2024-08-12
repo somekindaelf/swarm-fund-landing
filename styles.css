@@ -1,18 +1,18 @@
 /* styles.css */
 
-/* Updated background color to match the logo background */
+/* Updated background color to a slightly lighter grey */
 body {
     font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Adjust this color to match your logo's background */
+    background-color: #e6e6e6; /* Slightly lighter grey */
     color: #333333;
 }
 
 header {
     padding: 40px 20px;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: #e6e6e6; /* Match the background color */
 }
 
 .logo {
@@ -107,7 +107,7 @@ footer {
     padding: 20px;
     font-size: 0.9em;
     color: #999999;
-    background-color: #f0f0f0;
+    background-color: #e6e6e6; /* Match the background color */
 }
 
 .x-link {
