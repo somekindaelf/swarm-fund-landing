@@ -1,43 +1,49 @@
 /* styles.css */
 
-/* Updated background color to a slightly lighter grey */
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Helvetica', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e6e6e6; /* Slightly lighter grey */
+    background-color: #f8f8f8; /* Slightly lighter grey */
     color: #333333;
 }
 
 header {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #e6e6e6; /* Match the background color */
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
 }
 
 .logo-img {
-    height: 50px; /* Adjust height to scale the logo down */
-    width: auto; /* Maintain aspect ratio */
+    height: 40px;
+    width: auto;
 }
 
-.tagline {
-    font-size: 1.2em;
-    color: #666666;
-    margin-top: 10px;
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    font-size: 0.9em;
 }
 
 .intro {
-    text-align: center;
     padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
 .form-section {
@@ -49,7 +55,6 @@ header {
 }
 
 .form-section h2 {
-    text-align: center;
     margin-bottom: 20px;
     font-weight: 600;
     color: #333333;
@@ -70,19 +75,11 @@ header {
 .form-group select {
     width: 100%;
     padding: 10px;
-    border: none;
-    border-bottom: 1px solid #dddddd;
-    border-radius: 0;
+    border: 1px solid #dddddd;
     background-color: #f9f9f9;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Helvetica', Arial, sans-serif;
     font-size: 1em;
     color: #333333;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-    outline: none;
-    border-bottom: 1px solid #333333;
 }
 
 button[type="submit"] {
@@ -91,8 +88,8 @@ button[type="submit"] {
     background-color: #333333;
     border: none;
     color: #ffffff;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.2em;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 1em;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -107,7 +104,7 @@ footer {
     padding: 20px;
     font-size: 0.9em;
     color: #999999;
-    background-color: #e6e6e6; /* Match the background color */
+    background-color: #f8f8f8;
 }
 
 .x-link {
@@ -118,5 +115,5 @@ footer {
 .x-img {
     width: 30px;
     height: 30px;
-    filter: invert(100%); /* Invert colors to match monochrome theme */
+    filter: invert(100%);
 }
